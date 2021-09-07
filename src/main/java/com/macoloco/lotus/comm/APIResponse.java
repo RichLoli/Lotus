@@ -16,20 +16,20 @@ public class APIResponse implements Serializable {
 
     private String msg;
 
-    private Map<String, Object> data = new HashMap<>();
+    private Object data;
 
     public APIResponse(HTTPCode httpCode){
         this.code = httpCode.getCode();
         this.msg = httpCode.getMsg();
     }
 
-    public APIResponse data(Map<String, Object>  data){
+    public APIResponse data(Object data){
         this.data = data;
         return this;
     }
 
     public APIResponse p(String key, Object value){
-        data.put(key, value);
+        ((Map)data).put(key, value);
         return this;
     }
 }

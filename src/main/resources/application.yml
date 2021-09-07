@@ -1,0 +1,19 @@
+server:
+  port: 8848
+
+
+spring:
+  datasource:
+    username: root
+    password: maco601
+    url: jdbc:mysql://81.70.153.133:12348/lotus?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.macoloco.lotus.pojo
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true

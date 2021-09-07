@@ -1,0 +1,19 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.macoloco.lotus.dao.ForceNodesDao">
+    <select id="selectAll" resultType="ForceMap">
+        SELECT * FROM force_nodes
+    </select>
+    
+    <insert id="insert">
+
+    </insert>
+
+    <update id="update">
+
+    </update>
+
+    <delete id="delete">
+
+    </delete>
+</mapper>

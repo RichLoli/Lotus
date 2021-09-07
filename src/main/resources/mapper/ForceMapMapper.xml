@@ -1,0 +1,39 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.macoloco.lotus.dao.ForceMapDao">
+    <sql id="column">
+        id,
+        name,
+        type,
+        userid,
+        createtime,
+        updatetime
+    </sql>
+    <select id="selectAll" resultType="ForceMap">
+        SELECT
+        <include refid="column">
+        </include>
+        FROM force_map
+    </select>
+
+    <insert id="insert" parameterType="ForceMap">
+        INSERT INTO
+        force_map(
+            <include refid="column"></include>
+        )
+        values (
+            #{id},
+            #{name},
+            #{type},
+            #{userid},
+            #{createtime},
+            #{updatetime}
+        )
+    </insert>
+
+    <update id="update">
+    </update>
+
+    <delete id="delete">
+    </delete>
+</mapper>
